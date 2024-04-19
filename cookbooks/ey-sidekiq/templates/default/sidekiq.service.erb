@@ -16,4 +16,5 @@ StandardOutput=append:/data/<%= @app_name %>/current/log/sidekiq_<%= @count %>.l
 StandardError=append:/data/<%= @app_name %>/current/log/sidekiq_<%= @count %>.stderr.log
 MemoryMax=<%= @memory_limit %>M
 MemorySwapMax=<%= @memory_limit %>M
+MemoryHigh=<%= @memory_limit_threshold %>M
 EnvironmentFile=/data/<%= @app_name %>/shared/config/env.sidekiq.cloud
