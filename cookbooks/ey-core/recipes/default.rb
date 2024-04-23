@@ -12,9 +12,13 @@ end
 
 apt_update
 
-package "openssl"
+package "openssl" do
+  action :install
+end
 
-package "run-one" # Makes the run-one binary accessible across system, similar to lockrun in previous stack
+package "run-one" do # Makes the run-one binary accessible across system, similar to lockrun in previous stack
+  action :install
+end
 
 package "net-tools" do
   action :install
